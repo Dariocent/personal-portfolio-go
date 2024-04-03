@@ -1,0 +1,11 @@
+[build]
+cmd = "go build -o ./tmp/main ."
+bin = "tmp/main"
+full_bin = "APP_ENV=development ./tmp/main"
+
+[watch]
+includes = ["**/*"]
+excludes = ["tmp"]
+
+[log]
+level = "debug"

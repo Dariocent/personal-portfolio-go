@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Deploying Lichess on Kubernetes{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="markdown-content">
+        <!-- Your Markdown content will be rendered here -->
+        test
+        # Test
+        {{ markdown_content|safe }}
+    </div>
+</body>
+
+{% endblock %}
