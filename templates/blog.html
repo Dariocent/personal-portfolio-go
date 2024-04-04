@@ -28,9 +28,20 @@
 </head>
 
 <body>
-    <div class="shadow-1-strong bg-white my-5 p-5" id="blog">
-        <div id="fetchArticlesBtn" hx-get="/api/blog/articles" hx-trigger="load"></div>
-    <div>
-    
+<header class="d-print-none">
+    <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix">
+            <h1 class="site-title mb-0">Dario Cantella</h1>
+            <div class="site-nav">
+                <nav role="navigation">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"><a class="nav-link" href="/blog" title="Blog"><span class="menu-title">Blog Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/" title="Home"><span class="menu-title">cantella.dev</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <div id="fetchArticlesBtn" hx-get="/api/blog/articles" hx-trigger="load"></div>
+
 </body>
 </html>
