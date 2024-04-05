@@ -10,4 +10,5 @@ type Article struct {
 var Articles = []Article{
     {ID: 1, Title: "First Post", Content: "Hello, this is my first post."},
     {ID: 2, Title: "Second Post", Content: "Another day, another post."},
+    {ID: 3, Title: "Third Post", Content: "Yet another post."},
 }

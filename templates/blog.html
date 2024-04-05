@@ -25,23 +25,31 @@
     </style>
     </noscript>
     <script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
+
+    <header class="d-print-none">
+        <div class="container text-center text-lg-left">
+            <div class="pt-4 clearfix">
+                <h1 class="site-title mb-0">Dario Cantella</h1>
+                <div class="site-nav">
+                    <nav role="navigation">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="/blog" title="Blog"><span class="menu-title">Blog Home</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/" title="Home"><span class="menu-title">cantella.dev</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 </head>
 
 <body>
-<header class="d-print-none">
-    <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix">
-            <h1 class="site-title mb-0">Dario Cantella</h1>
-            <div class="site-nav">
-                <nav role="navigation">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item"><a class="nav-link" href="/blog" title="Blog"><span class="menu-title">Blog Home</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="/" title="Home"><span class="menu-title">cantella.dev</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    <div id="fetchArticlesBtn" hx-get="/api/blog/articles" hx-trigger="load"></div>
 
+    <div id="fetchArticlesBtn" hx-get="/api/blog/articles" hx-trigger="load"></div>
+    <button hx-get="/api/blog/articles/1" hx-trigger="click" hx-target="#fetchArticlesBtn" hx-swap="body settle:1s">Get Article 1</button>
+    <button hx-get="/api/blog/articles/2" hx-trigger="click">Get Article 2</button>
+    <button hx-delete="/api/blog/articles/1" hx-trigger="click">Delete Article 1</button>
+    <button hx-post="/api/blog/articles" hx-trigger="click">Create Article</button>
+    
 </body>
 </html>
